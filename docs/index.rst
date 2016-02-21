@@ -903,7 +903,7 @@ Next we take all the detective work we did with the page's HTML above and conver
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('table', attrs={'class': 'resultsTable'})
+    table = soup.find('tbody', attrs={'class': 'stripe'})
     print table.prettify()
 
 Save the file and run ``scrape.py`` again. This time it only prints out the table we're after, which was selected by instructing BeautifulSoup to return only those ``<table>`` tags with ``resultsTable`` as their class attribute.
